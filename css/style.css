@@ -1,0 +1,611 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+  font-family: "montserrat", sans-serif;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* *Start Home */
+.navbar-padding {
+  padding-top: 1rem;
+  transition: padding 0.3s ease;
+}
+
+.transition-padding {
+  transition: padding 0.3s ease;
+}
+
+.navbar.scrolled .navbar-padding {
+  padding-top: 0 !important;
+}
+
+.navbar {
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar.scrolled {
+  background-color: white !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar.scrolled .nav-link,
+.navbar.scrolled .navbar-brand {
+  color: #000 !important;
+}
+
+.navbar {
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.navbar-nav .nav-link {
+  position: relative;
+}
+
+.navbar-nav .nav-link::after {
+  content: "";
+  width: 65%;
+  height: 2px;
+  margin: auto;
+  position: absolute;
+  bottom: 0;
+  left: 17%;
+  transform: scale(0);
+  background-color: white;
+  transition: 1.2s ease;
+  transform-origin: left;
+}
+
+.navbar-nav .nav-link.active::after,
+.navbar-nav .nav-link:hover::after {
+  transform: scaleX(1);
+}
+
+.navbar.scrolled .nav-link.active::after,
+.navbar.scrolled .nav-link:hover::after {
+  background-color: black !important;
+}
+
+
+.home-content {
+  background: linear-gradient(rgba(0, 0, 0, 0.6)), url('../images/imgs/bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  background-attachment: fixed;
+}
+
+.home-content .content {
+  height: 100vh;
+}
+
+.content h1::after {
+  content: "";
+  animation-name: typing;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+  animation-duration: 5s;
+}
+
+@keyframes typing {
+  0% {
+    content: "D |";
+  }
+
+  2.22% {
+    content: "De |";
+  }
+
+  4.44% {
+    content: "Dev |";
+  }
+
+  6.66% {
+    content: "Deve |";
+  }
+
+  8.88% {
+    content: "Devel |";
+  }
+
+  11.11% {
+    content: "Develo |";
+  }
+
+  13.33% {
+    content: "Develop |";
+  }
+
+  15.55% {
+    content: "Develope |";
+  }
+
+  17.77% {
+    content: "Developer |";
+  }
+
+  20% {
+    content: "Develope |";
+  }
+
+  22.22% {
+    content: "Develop |";
+  }
+
+  24.44% {
+    content: "Develo |";
+  }
+
+  26.66% {
+    content: "Devel |";
+  }
+
+  28.88% {
+    content: "Deve |";
+  }
+
+  31.11% {
+    content: "Dev |";
+  }
+
+  33.33% {
+    content: "De |";
+  }
+
+  35.55% {
+    content: "D |";
+  }
+
+  37.77% {
+    content: " |";
+  }
+
+  40% {
+    content: "De |";
+  }
+
+  42.22% {
+    content: "Des |";
+  }
+
+  44.44% {
+    content: "Desi |";
+  }
+
+  46.66% {
+    content: "Desig |";
+  }
+
+  48.88% {
+    content: "Design |";
+  }
+
+  51.11% {
+    content: "Designe |";
+  }
+
+  53.33% {
+    content: "Designer |";
+  }
+
+  55.55% {
+    content: "Designe |";
+  }
+
+  57.77% {
+    content: "Design |";
+  }
+
+  60% {
+    content: "Desig |";
+  }
+
+  62.22% {
+    content: "Desi |";
+  }
+
+  64.44% {
+    content: "Des |";
+  }
+
+  66.66% {
+    content: "De |";
+  }
+
+  68.88% {
+    content: "D |";
+  }
+
+  71.1% {
+    content: " |";
+  }
+
+  73.33% {
+    content: "L |";
+  }
+
+  75.55% {
+    content: "La |";
+  }
+
+  77.77% {
+    content: "Lar |";
+  }
+
+  80% {
+    content: "Larr |";
+  }
+
+  82.22% {
+    content: "Larry |";
+  }
+
+  84.44% {
+    content: "Larry D |";
+  }
+
+  86.66% {
+    content: "Larry Da |";
+  }
+
+  88.88% {
+    content: "Larry Dan |";
+  }
+
+  91.11% {
+    content: "Larry Dani |";
+  }
+
+  93.33% {
+    content: "Larry Danie |";
+  }
+
+  95.55% {
+    content: "Larry Daniel |";
+  }
+
+  97.77% {
+    content: "Larry Daniels |";
+  }
+
+  100% {
+    content: "Larry Daniels |";
+  }
+}
+
+.social i {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+/* *End Home */
+
+
+/* *Start about */
+.about .bg {
+  width: 400px;
+  background-image: radial-gradient(circle, #2b2a2a4a 1px, transparent 1px);
+  background-size: 10px 10px;
+}
+
+.about .hero img{
+  width: 100%;
+}
+
+.progress-bar {
+  display: flex;
+  align-items: center;
+  height: 30px;
+  padding: 10px;
+  background-color: #1C1C1C;
+}
+
+.progress,
+.progress-stacked {
+  height: 25px;
+}
+
+.btns .load {
+  background-color: #1C1C1C;
+  color: white;
+  transition: 0.3s;
+}
+
+.btns .load:hover {
+  background-color: white;
+  color: #1C1C1C;
+}
+
+.btns .contact {
+  background-color: white;
+  color: #1C1C1C;
+  transition: 0.3s;
+}
+
+.btns .contact:hover {
+  background-color: #1C1C1C;
+  color: white;
+}
+
+@media screen and (max-width:767px){
+  .about .bg {
+  width: 350px;
+  background-image: radial-gradient(circle, #2b2a2a4a 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.about .hero {
+  width: 400px;
+}
+}
+/* *End about */
+
+/*! start services */
+.service {
+  background-color: #F7F7F7;
+  word-spacing: 2px;
+}
+
+.content h2 {
+  background-image: radial-gradient(circle, #2b2a2a4a 1px, transparent 1px);
+  background-size: 10px 20px;
+  width: 200px;
+}
+
+.card {
+  box-shadow: 1px 1px 1px 1px rgba(128, 128, 128, 0.07);
+}
+
+.card .icon {
+  font-size: 30px;
+  background-color: #F7F7F7;
+  padding: 10px 18px;
+  border-radius: 50%;
+  transition: 0.5s;
+}
+
+.card:hover .icon {
+  background-color: black;
+  color: white;
+}
+
+/*! end services */
+
+/*^Start portfolio */
+.portfolio-item {
+  transition: 0.5s ease;
+}
+
+.portfolio-item .content {
+  transform: translateY(100%);
+  z-index: 1;
+  transition: 0.5s ease;
+}
+
+.head h2 {
+  background-image: radial-gradient(circle, #2b2a2a4a 1px, transparent 1px);
+  background-size: 10px 20px;
+  width: 200px;
+}
+
+.portfolio-item::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: white;
+  opacity: 0;
+  width: 95%;
+  margin: auto;
+  height: 95%;
+  transition: 0.5s ease;
+}
+
+.portfolio-item:hover::after {
+  opacity: 0.6;
+}
+
+.portfolio-item:hover .content {
+  transform: translateY(0);
+}
+
+.portfolio-item .content .icon .light,
+.portfolio-item .content .icon .plus {
+  padding: 6px;
+  border-radius: 50%;
+  border: 2px solid black;
+  background-color: black;
+  color: white;
+}
+
+.portfolio-item .content .icon .light:hover,
+.portfolio-item .content .icon .plus:hover {
+  color: black;
+  background-color: white;
+}
+
+.nav-pills .nav-link {
+  color: black !important;
+  background-color: transparent !important;
+  border-radius: 0 !important;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 8px;
+  font-weight: 500;
+}
+
+.nav-pills .nav-link.active {
+  border-bottom-color: black;
+  color: black !important;
+}
+/*^End portfolio */
+
+/* &Start testimonial */
+.testimonial{
+  background-color: #F7F7F7;
+}
+
+.testimonial p{
+  word-spacing: 2px;
+}
+
+.testimonial .head h2 {
+  background-image: radial-gradient(circle, #2b2a2a4a 1px, transparent 1px);
+  background-size: 10px 20px;
+  width: 200px;
+}
+
+.carousel-indicators {
+  position: static;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin-right: 15%;
+  margin-bottom: 1rem;
+  margin-left: 15%;
+  padding:10px 0 ;
+}
+
+.carousel-indicators .myindecator{
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: gray;
+}
+
+.testimonial .myimg{
+  height: 90px;
+  width: 90px;  
+}
+
+.testimonial .span{
+  font-size: 13px;
+}
+/* &End testimonial */
+
+
+/*! start team */
+.team{
+  background-color:#F7F7F7;
+}
+
+.team .header h2 {
+  background-image: radial-gradient(circle, #2b2a2a4a 1px, transparent 1px);
+  background-size: 10px 20px;
+  width: 200px;
+}
+
+.img-info .overlayer{
+  color: white;
+  transform: translateY(100%);
+  transition: 0.5s;
+}
+
+.img-info:hover .overlayer{
+  transform: translateY(0);
+}
+
+.img-info .overlayer i{
+  color: white;
+  background: #000;
+}
+
+.img-info .overlayer i:hover{
+  color: black;
+  background: white;
+}
+
+.img-info::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: white;
+  opacity: 0;
+  width: 95%;
+  margin: auto;
+  height: 95%;
+  transition: 0.9s ease;
+}
+
+.img-info:hover::after {
+  opacity: 0.95;
+  transform: rotatey(180deg);
+}
+
+.card .bg{
+  background-color:#5B5B5B;
+}
+/*! End team */
+
+/* *Start contact us */
+.contact .content h2{
+  background-image: radial-gradient(circle, #2b2a2a4a 1px, transparent 1px);
+  background-size: 10px 20px;
+  width: 250px;
+}
+
+.contact i{
+  border: 1px solid #F4F4F4;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: #F4F4F4;
+  color: #000;
+  cursor:default;
+}
+
+.contact i:hover{
+  border-color: black;
+  color: white;
+  background-color: #000;
+}
+
+.form-control {
+  width: 100%;
+  color: #757575;
+  background-color:#F4F4F4;
+  border: none;
+}
+
+.form-control:focus {
+  color: #757575;
+  background-color:#F4F4F4;
+  border-color:#F4F4F4;
+  outline: 0;
+  box-shadow:none;
+}
+
+.mybtn {
+  background: #242424;
+  padding: 7px 20px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  border: 1px solid #242424;
+}
+
+.mybtn:hover{
+  background-color: #fff;
+  color: #242424;
+  border: 1px solid #242424;
+}
+/* *End contact us */
+
+
+
+/*Start footer */
+footer{
+  background: #242424;
+}
+/*End footer */
